@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'unfold',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,7 +42,8 @@ INSTALLED_APPS = [
     'part.apps.PartConfig',
     'user_profile.apps.UserProfileConfig',
     'common.apps.CommonConfig',
-    'order.apps.OrderConfig'
+    'order.apps.OrderConfig',
+
 ]
 
 MIDDLEWARE = [

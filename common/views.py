@@ -1,8 +1,4 @@
+from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
-def index(request):
-    context = {
-        'home': 'home',
-        'about': 'about',
-        'contact': 'contact',
-    }
-    return render(request, 'home.html', context)
+def index(request: HttpRequest) -> HttpResponse:
+    return render(request, 'home.html')

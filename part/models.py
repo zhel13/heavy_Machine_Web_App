@@ -28,7 +28,10 @@ class Part(TimeStamp):
         max_length=100,
         blank=True,
     )
-    description = models.TextField()
+    description = models.TextField(
+        null=True,
+        blank=True,
+    )
     price = models.DecimalField(
         max_digits=10,
         decimal_places=2,
