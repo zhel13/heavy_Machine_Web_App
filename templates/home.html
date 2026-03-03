@@ -1,18 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <header>
+{% load static %}
+{% include 'common/navigation.html' %}
+{% load user_info %}
 
-    </header>
     <main>
-
+        {% show_user_info %}
+        <section>
+            <div>
+                <p>
+                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad cupiditate earum facilis modi quam quibusdam ratione. Ab ad aliquam, eius, eum ex explicabo fuga molestias nihil quis repellat voluptatum.</span><span>At esse explicabo inventore ipsam ipsum obcaecati placeat quas. Delectus, eaque nam. Ad est ex illo iste iusto, qui! Assumenda atque deleniti dolores eius maxime officia placeat tenetur ullam velit.</span>
+                </p>
+                <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consectetur consequuntur facere molestias quaerat? At beatae delectus dolore enim ex fugit, iusto quo reiciendis sequi suscipit tenetur velit, voluptate voluptatum.</span><span>Alias architecto asperiores at doloribus, eaque est fugit laudantium libero natus necessitatibus nesciunt nihil nulla omnis, perspiciatis quia repellat sed suscipit veniam. Consectetur corporis error exercitationem molestiae, officia quia repudiandae.</span>
+                </p>
+                <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio earum explicabo nemo ullam ut? Accusantium alias exercitationem laboriosam repellat vitae. Blanditiis commodi cum optio reprehenderit! Iste labore magni saepe tempora.</span><span>Ab corporis, error illo inventore laboriosam, magni maiores molestiae perspiciatis possimus praesentium quae, qui quisquam soluta vero voluptatem. Culpa, inventore, labore! Explicabo hic perspiciatis provident veritatis voluptatem! Nobis, quam recusandae.</span>
+                </p>
+            </div>
+{#            <div></div>#}
+{#            <div></div>#}
+        </section>
     </main>
-    <footer>
-        &copy;LRM Group
-    </footer>
-</body>
-</html>
+{% include 'common/footer.html' %}

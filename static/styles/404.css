@@ -1,0 +1,11 @@
+*, *::after, *::before {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: aquamarine;
+    display: flex;
+    justify-content: center;
+}

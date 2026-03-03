@@ -1,0 +1,15 @@
+{% include 'common/navigation.html' %}
+
+{% block content %}
+    <div class="parts">
+        {% include 'search-form.html' %}
+        {% for part in parts %}
+            <div class="part">
+                <h3> {{ part.name|lower|capfirst }}</h3>
+            </div>
+        {% empty %}
+            <h3>No Parts</h3>
+        {% endfor %}
+    </div>
+{% endblock %}
+{% include 'common/footer.html' %}

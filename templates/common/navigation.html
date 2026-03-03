@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'styles/nav-styles.css' %}">
+    <title>Home Page</title>
+    <link rel="icon" type="image/png" href="{% static 'img/LRE logo SVG.png' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.2.0/css/all.css">
+</head>
+<body>
+
+    <header class="site-header">
+
+        <div class="container">
+            <img class="logo" src="../../static/img/LRE%20logo%20SVG.png" alt="logo">
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#"><i class="fa-regular fa-house" style="color: rgb(255, 212, 59);"></i> Home</a></li>
+                    <li class="nav-item"><a href="#"><i class="fa-regular fa-user" style="color: rgb(255, 212, 59);"></i> Login</a></li>
+                    <li class="nav-item"><a href="#"><i class="fa-solid fa-file-signature" style="color: rgb(255, 212, 59);"></i> Register</a></li>
+                    <li class="nav-item"><a href="{% url 'dashboard' %}"><i class="fa-solid fa-gears" style="color: rgb(255, 212, 59);"></i> Parts</a></li>
+                    <li class="nav-item"><a href="#"><i class="fa-solid fa-truck-monster" style="color: rgb(255, 212, 59);"></i> Machines</a></li>
+                    <li class="nav-item"><a href="#"><i class="fa-regular fa-address-book" style="color: rgb(255, 212, 59);"></i> Contacts</a></li>
+                </ul>
+            </nav>
+            {% include 'current_time.html' %}
+            <form action="#" class="search-form">
+                <button type="submit" class="search-part"><input type="search" placeholder="Search part..."><i class="fa-solid fa-magnifying-glass" style="color: rgb(255, 212, 59);"></i></button>
+            </form>
+        </div>
+    </header>
+
+</body>

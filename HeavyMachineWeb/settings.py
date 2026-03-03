@@ -41,11 +41,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'machine.apps.MachineConfig',
+    'machinecategory.apps.MachineCategoryConfig',
     'part.apps.PartConfig',
     'user_profile.apps.UserProfileConfig',
     'common.apps.CommonConfig',
     'order.apps.OrderConfig',
+    'machinemodel.apps.MachinemodelConfig'
+
 
 ]
 

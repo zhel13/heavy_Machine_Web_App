@@ -6,18 +6,16 @@ from django.db.models import ForeignKey
 from django.utils.text import slugify
 
 from common.models import TimeStamp
-from machine.models import Machine
+from machinecategory.models import MachineCategory
+from machinemodel.models import MachineModel
 
 
 # Create your models here.
 class Part(TimeStamp):
     name = models.CharField(max_length=100)
-    machines = ForeignKey(
-        Machine,
-        on_delete=models.CASCADE,
-        related_name='parts',
-    )
-    serial_number = models.IntegerField(
+    machine_compatibility = models.ManyToManyField(MachineModel)
+    serial_number = models.CharField(
+        max_length=100,
         validators=[
             MinLengthValidator(5),
             MaxLengthValidator(10),
@@ -50,8 +48,9 @@ class Part(TimeStamp):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = slugify(f'{self.name}-{self.machines.model}')
+            self.slug = slugify(f'{self.name}-{self.serial_number}')
         super().save(*args, **kwargs)
 
 
-
+    def __str__(self):
+        return self.name
